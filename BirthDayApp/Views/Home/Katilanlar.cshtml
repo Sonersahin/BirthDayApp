@@ -1,0 +1,16 @@
+@model IEnumerable<BirthDayApp.Models.DavetiyeModel>
+
+@if (Model.Count() == 1)
+{
+    <p>Partiye Gelen İlk Kişi Sensin :)</p>
+}
+else
+{
+    <hr/>
+    <p>
+        @foreach (var i in Model)
+        {
+            <label class="label label-success">@i.Ad</label>
+        }
+    </p>
+}
